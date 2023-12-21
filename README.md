@@ -66,9 +66,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # ssa_ctrl_bodega
 
+## Task
+- [x] Auth / Register and login with BD
+- [x] Change language to ES
+- [ ] Create CRUD
+- [ ] Create form to edit and create *
+- [ ] Show error messages cutely in laravel
+- [ ] Use sweetalert or modal 
+
+
+LARAVEL
+
 composer create-project laravel/laravel ssa_bodega            --> Crear proyecto desde cero
-composer require laravel/ui                                   --> Para requerir el uso del modulo ui
-php artisan ui bootstrap --auth                               --> Aplicar modulo
 php artisan serve                                             --> Levantar pagina en localhost
 php artisan serve --host="192.168.100.99"                     --> Levantar pagina en una ip indicada
 php artisan migrate                                           --> Migrar BD (debe estar creada la BD)
@@ -80,3 +89,32 @@ php artisan make:model nombre_del_modelo                      --> Solo crea el m
 php artisan make:model nombre_del_modelo -m                   --> Crea el modelo mas hace la mogracion
 php artisan make:migration create_<name>_table                --> Crea migracion de una tabla de BD
 php artisan route:list                                        --> Muestra las rutas que estan creadas
+
+PAQUETES LARAVEL
+[laravel/lang](https://laravel-lang.com/installation.html)
+
+sudo apt-get install php8.1-bcmath
+composer require --dev laravel-lang/common
+php artisan lang:publish
+php artisan lang:add es
+php artisan lang:update
+
+[laravel/ui](https://github.com/laravel/ui)
+composer require laravel/ui                                   --> Para requerir el uso del modulo ui
+php artisan ui bootstrap --auth                               --> Aplicar modulo
+
+#####################################################################################
+
+<details>
+
+<summary>LINUX</summary>
+
+Comandos linux
+
+```bash
+   timedatectl list-timezones
+   timedatectl set-timezone America/Santiago
+   lsb_release -a
+```
+
+</details>
