@@ -103,7 +103,7 @@ php artisan lang:add es
 php artisan lang:update
 ```
 <details>
-<summary>### Para la autenticación [laravel/ui](https://github.com/laravel/ui)</summary>
+<summary>Para la autenticación [laravel/ui](https://github.com/laravel/ui)</summary>
 
 ```bash
 composer require laravel/ui                                   --> Para requerir el uso del modulo ui
