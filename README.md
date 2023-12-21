@@ -65,3 +65,18 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 # ssa_ctrl_bodega
+
+composer create-project laravel/laravel ssa_bodega            --> Crear proyecto desde cero
+composer require laravel/ui                                   --> Para requerir el uso del modulo ui
+php artisan ui bootstrap --auth                               --> Aplicar modulo
+php artisan serve                                             --> Levantar pagina en localhost
+php artisan serve --host="192.168.100.99"                     --> Levantar pagina en una ip indicada
+php artisan migrate                                           --> Migrar BD (debe estar creada la BD)
+php artisan migrate:fresh                                     --> Refrescar BD
+php artisan migrate:rollback                                  --> Rollback de una migracion
+php artisan make:controller Auth/AuthController               --> Solo crea el controller
+php artisan make:controller Auth/AuthController --model=User  --> Crea el controller con uno modelo que ya existe
+php artisan make:model nombre_del_modelo                      --> Solo crea el modelo
+php artisan make:model nombre_del_modelo -m                   --> Crea el modelo mas hace la mogracion
+php artisan make:migration create_<name>_table                --> Crea migracion de una tabla de BD
+php artisan route:list                                        --> Muestra las rutas que estan creadas

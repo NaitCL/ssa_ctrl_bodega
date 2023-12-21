@@ -100,16 +100,40 @@
                   <h3 class="font-weight-bolder text-info text-gradient">Bienvenido de Nuevo</h3>
                   <p class="mb-0">Ingresa tu usuario y contraseña para iniciar sesión</p>
                 </div>
+                
                 <div class="card-body">
-                  <form role="form" method="post" action="" >
+                  <form role="form" action="{{ route('login.verify') }}" method="post" >
+
                     @csrf
+
+                    @error('invalid_credencials')
+                      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <small>
+                          {{ $message }}
+                        </small>
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                    @enderror
+                    
                     <label>Correo Electronico</label>
                     <div class="mb-3">
-                      <input type="email" class="form-control" placeholder="Correo Electronico" aria-label="Correo Electronico" aria-describedby="email-addon" autocomplete="off">
+                      <input type="email" name="email" class="form-control" placeholder="Correo Electronico" aria-label="Correo Electronico" aria-describedby="email-addon" autocomplete="off">
+                      @error('email')
+                        <small class="text-danger mt-1">
+                          <strong>{{ $message }}</strong>
+                        </small>
+                      @enderror
                     </div>
                     <label>Contraseña</label>
                     <div class="mb-3">
-                      <input type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="password-addon" autocomplete="off">
+                      <input type="password" name="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="password-addon" autocomplete="off">
+                      @error('password')
+                        <small class="text-danger mt-1">
+                          <strong>{{ $message }}</strong>
+                        </small>
+                      @enderror
                     </div>
                   
                     <div class="text-center">

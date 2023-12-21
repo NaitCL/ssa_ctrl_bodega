@@ -160,16 +160,36 @@
                 
                   @csrf
                   <div class="mb-3">
-                    <input name="name" type="text" class="form-control" placeholder="Nombre" aria-label="Nombre" aria-describedby="email-addon" autocomplete="off">
+                    <input name="name" type="text" class="form-control" value="{{ old('name') }}" placeholder="Nombre" aria-label="Nombre" aria-describedby="email-addon" autocomplete="off">
+                    @error('name')
+                    <small class="text-danger mt-1">
+                      <strong>{{ $message }}</strong>
+                    </small>
+                    @enderror
                   </div>
                   <div class="mb-3">
-                    <input name="email" type="email" class="form-control" placeholder="Correo Electronico" aria-label="Correo Electronico" aria-describedby="email-addon" autocomplete="off">
+                    <input name="email" type="email" class="form-control" value="{{ old('email') }}" placeholder="Correo Electronico" aria-label="Correo Electronico" aria-describedby="email-addon" autocomplete="off">
+                    @error('email')
+                    <small class="text-danger mt-1">
+                      <strong>{{ $message }}</strong>
+                    </small>
+                    @enderror
                   </div>
                   <div class="mb-3">
                     <input name="password" type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="password-addon" autocomplete="off">
+                    @error('password')
+                    <small class="text-danger mt-1">
+                      <strong>{{ $message }}</strong>
+                    </small>
+                    @enderror
                   </div>
                   <div class="mb-3">
-                    <input name="password_confirmation" type="password" class="form-control" placeholder="Contraseña" aria-label="Contraseña" aria-describedby="password-addon" autocomplete="off">
+                    <input name="password_confirmation" type="password" class="form-control" placeholder="Confirma la Contraseña" aria-label="Contraseña" aria-describedby="password-addon" autocomplete="off">
+                    @error('password_confirmation')
+                    <small class="text-danger mt-1">
+                      <strong>{{ $message }}</strong>
+                    </small>
+                    @enderror
                   </div>
                   <div class="text-center">
                     <button type="submit" class="btn bg-gradient-dark w-100 my-4 mb-2">Registrarse</button>
