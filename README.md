@@ -75,33 +75,40 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - [ ] Use sweetalert or modal 
 
 
-LARAVEL
+## LARAVEL
 
-composer create-project laravel/laravel ssa_bodega            --> Crear proyecto desde cero
-php artisan serve                                             --> Levantar pagina en localhost
-php artisan serve --host="192.168.100.99"                     --> Levantar pagina en una ip indicada
-php artisan migrate                                           --> Migrar BD (debe estar creada la BD)
-php artisan migrate:fresh                                     --> Refrescar BD
-php artisan migrate:rollback                                  --> Rollback de una migracion
-php artisan make:controller Auth/AuthController               --> Solo crea el controller
-php artisan make:controller Auth/AuthController --model=User  --> Crea el controller con uno modelo que ya existe
-php artisan make:model nombre_del_modelo                      --> Solo crea el modelo
-php artisan make:model nombre_del_modelo -m                   --> Crea el modelo mas hace la mogracion
-php artisan make:migration create_<name>_table                --> Crea migracion de una tabla de BD
-php artisan route:list                                        --> Muestra las rutas que estan creadas
+```bash
+   composer create-project laravel/laravel ssa_bodega            --> Crear proyecto desde cero
+   php artisan serve                                             --> Levantar pagina en localhost
+   php artisan serve --host="192.168.100.99"                     --> Levantar pagina en una ip indicada
+   php artisan migrate                                           --> Migrar BD (debe estar creada la BD)
+   php artisan migrate:fresh                                     --> Refrescar BD
+   php artisan migrate:rollback                                  --> Rollback de una migracion
+   php artisan make:controller Auth/AuthController               --> Solo crea el controller
+   php artisan make:controller Auth/AuthController --model=User  --> Crea el controller con uno modelo que ya existe
+   php artisan make:model nombre_del_modelo                      --> Solo crea el modelo
+   php artisan make:model nombre_del_modelo -m                   --> Crea el modelo mas hace la mogracion
+   php artisan make:migration create_<name>_table                --> Crea migracion de una tabla de BD
+   php artisan route:list                                        --> Muestra las rutas que estan creadas
+```
 
-PAQUETES LARAVEL
-[laravel/lang](https://laravel-lang.com/installation.html)
+## PAQUETES LARAVEL
+### Para el idioma [laravel/lang](https://laravel-lang.com/installation.html)
 
+```bash
 sudo apt-get install php8.1-bcmath
 composer require --dev laravel-lang/common
 php artisan lang:publish
 php artisan lang:add es
 php artisan lang:update
+```
 
-[laravel/ui](https://github.com/laravel/ui)
+### Para la autenticación [laravel/ui](https://github.com/laravel/ui)
+
+```bash
 composer require laravel/ui                                   --> Para requerir el uso del modulo ui
 php artisan ui bootstrap --auth                               --> Aplicar modulo
+```
 
 #####################################################################################
 
